@@ -1,9 +1,11 @@
 import "./styles.css";
+import "./styles/logos.css";
 
 import React, { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import createGlobe from "cobe";
 import usePartySocket from "partysocket/react";
+import Logos from "./components/Logos";
 
 // The type of messages we'll be receiving from the server
 import type { OutgoingMessage } from "../shared";
@@ -90,6 +92,7 @@ function App() {
 
   return (
     <div className="App">
+      <Logos />
       <h1>Where's everyone at?</h1>
       {counter !== 0 ? (
         <p>
